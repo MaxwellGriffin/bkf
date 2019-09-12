@@ -1,33 +1,24 @@
 <?php get_header(); ?>
 
-<?php insert_nav(); ?>
+<?php
+insert_nav();
+// $args = array(
+//     'theme_location' => 'header_menu_location'
+// );
+// echo "<nav>";
+// wp_nav_menu($args);
+// echo "</nav>";
+?>
 
-<div class="container-fluid slider">
-    <div class="row">
-        <div class="col-md-6">
-            <h1>Bar Keepers Friend Cleanser</h1>
-            <p>Our classic cleaning powder - flexible and versatile.</p>
-            <a href="" class="bkf-button-blue">More Information  <i class="fas fa-chevron-right"></i></a>
-        </div>
-    </div>
-    <div class="slider-featured text-center">
-        <span>Featured</span>
-        <img src="<?php echo get_theme_file_uri(); ?>/images/bkf_howto.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-        <a href="#" class="bkf-link">Download Guide <i class="fas fa-download"></i></a>
-    </div>
-</div>
+<?php
+//get home slider
+$slider_control_panel = pods('slider_control_panel');
+$home_slider = $slider_control_panel->field('home_slider');
+// echo $home_slider['ID'];
+insert_slider($home_slider['ID']);
+?>
 
-<div class="container-fluid before-after-box">
-    <div class="row">
-        <div class="col-md-6 my-auto">
-            <span>Need some cleaning inspiration? You won't believe what Bar Keepers Friend can do.</span>
-        </div>
-        <div class="col-md-6 text-right">
-            <a href="#" class="bkf-button-green">Before & After Gallery <i class="fas fa-chevron-right"></i></a>
-        </div>
-    </div>
-</div>
+<?php insert_widget('before-after-box'); ?>
 
 <?php insert_widget('places-box'); ?>
 

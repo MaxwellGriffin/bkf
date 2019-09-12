@@ -17,6 +17,12 @@ INSERT INTO `wp_usermeta` VALUES
 (13,1,"wp_user_level","10"),
 (14,1,"dismissed_wp_pointers",""),
 (15,1,"show_welcome_panel","1"),
-(16,1,"session_tokens","a:4:{s:64:\"ce1c5fb2b540d11bcf2d0e35b1f29cea87ba13853d053d1837a5f94e35163cde\";a:4:{s:10:\"expiration\";i:1566407901;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36\";s:5:\"login\";i:1566235101;}s:64:\"81e310167e2f173f82b0baceff20ae1c42d4a7bc2664d4e15df74b820cc902f4\";a:4:{s:10:\"expiration\";i:1566417815;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36\";s:5:\"login\";i:1566245015;}s:64:\"9d6c6aed9e4f0fe61544fad62f12155c4dc709271a046e96beaeb8fb2b2041f4\";a:4:{s:10:\"expiration\";i:1566484086;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36\";s:5:\"login\";i:1566311286;}s:64:\"61feab85287705b9243213142e9dcd84234c9b70d4ecc31766f73b6aebd51ceb\";a:4:{s:10:\"expiration\";i:1567607998;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36\";s:5:\"login\";i:1566398398;}}"),
-(17,1,"wp_dashboard_quick_press_last_post_id","4"),
-(18,1,"community-events-location","a:1:{s:2:\"ip\";s:12:\"192.168.95.0\";}");
+(16,1,"session_tokens","a:2:{s:64:\"43f7dfd4c551674f35efc9b70ae9569969986a09c0cc8e1759165b969180ecd3\";a:4:{s:10:\"expiration\";i:1567784896;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36\";s:5:\"login\";i:1567612096;}s:64:\"13f87d3c1bb54c14358202872b47bdaacd77026be1ea87fcbbd2e4c121d7801f\";a:4:{s:10:\"expiration\";i:1568899708;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36\";s:5:\"login\";i:1567690108;}}"),
+(17,1,"wp_dashboard_quick_press_last_post_id","12"),
+(18,1,"community-events-location","a:1:{s:2:\"ip\";s:12:\"192.168.95.0\";}"),
+(19,1,"show_per_page","25"),
+(20,1,"orderby",""),
+(21,1,"wp_user-settings","mfold=o&libraryContent=browse"),
+(22,1,"wp_user-settings-time","1567796748"),
+(23,1,"closedpostboxes_product","a:0:{}"),
+(24,1,"metaboxhidden_product","a:1:{i:0;s:7:\"slugdiv\";}");
