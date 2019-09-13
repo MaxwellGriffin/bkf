@@ -7,19 +7,37 @@
 $slider_control_panel = pods('slider_control_panel');
 $home_products_page_slider = $slider_control_panel->field('home_products_page_slider');
 insert_slider($home_products_page_slider['ID']);
+
+//get query vars
+$product_type = get_query_var('product_type');
+
+//get products
+$args = array(
+    'numberposts' => -1,
+    'post_type' => 'product',
+    'post_status' => 'publish',
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'product_type',
+            'field' => 'slug',
+            'terms' => $product_type,
+        )
+    )
+);
+$products_query = new WP_Query($args);
 ?>
 
 <div class="blue-bar"></div>
 
-<div class="archive-product">
+<div class="archive-product bg-papyrus">
     <div class="container text-center page-title">
-        <h1>BKF Household Products</h1>
+        <h1>BKF Household Products (<?php echo $product_type; ?>)</h1>
     </div>
 
     <div class="container product-list">
         <div class="row">
             <?php
-            if (have_posts()) : while (have_posts()) : the_post();
+            if ($products_query->have_posts()) : while ($products_query->have_posts()) : $products_query->the_post();
                     $product = pods('product', get_the_id());
                     ?>
                     <?php include(locate_template('template-parts/archive-product/product-list-item.php', false, false)); ?>

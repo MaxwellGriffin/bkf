@@ -24,21 +24,22 @@ $cats = get_terms(array(
     <p>You have questions. We have answers.</p>
 
     <div class="row d-none d-md-flex">
-        <?php
-        for ($i = 0; $i < count($cats); $i++) {
-            ?>
-            <div class="col-2">
-                <div class="tab text-center<?php if ($i == 0) {
-                                                    echo ' active';
-                                                } ?>" id="tab-<?php echo $i; ?>">
-                    <span><?php echo $cats[$i]->name; ?></span>
+        <div class="tabs-container">
+            <?php
+            for ($i = 0; $i < count($cats); $i++) {
+                if ($i == 0) {
+                    $myclass = " active";
+                } else {
+                    $myclass = "";
+                }
+                ?>
+                <div class="tab<?php echo $myclass; ?>" id="tab-<?php echo $i; ?>">
+                    <?php echo $cats[$i]->name; ?>
                 </div>
-            </div>
-        <?php
-        }
-        ?>
-        <div class="tab-divider-container">
-            <hr class="tab-divider">
+            <?php
+            }
+            ?>
+            <div class="tabs-divider"></div>
         </div>
     </div>
 </div>

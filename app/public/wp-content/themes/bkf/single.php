@@ -36,7 +36,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                                         <option value="default">Please Choose One Option</option>
                                     </select>
                                     <input type="checkbox" name="vehicle1" value="Bike" id="checkbox"> <span id="checkbox-text">I want to receive Bar Keepers Friend tips and special offers</span><br>
-                                    <button type="submit" class="bkf-button-blue">Get the Guide <i class="fas fa-chevron-right"></i></button>
+                                    <button type="submit" class="bkf-button blue">Get the Guide <i class="fas fa-chevron-right"></i></button>
                                 </form>
                             </div>
                         </div>

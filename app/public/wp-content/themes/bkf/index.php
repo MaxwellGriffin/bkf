@@ -58,7 +58,7 @@ $recent_posts = wp_get_recent_posts($args);
                     <p class="category-links"><a href="#" class="category-link">How to Tips</a>, <a href="#">Kitchen</a></p>
                     <h3><?php echo $most_recent_post[0]['post_title']; ?></h3>
                     <p><?php echo substr($most_recent_post[0]['post_content'], 0, 50); ?>...</p>
-                    <a href="<?php echo get_permalink($most_recent_post[0]['ID']); ?>" class="bkf-button-blue">Read Article <i class="fas fa-chevron-right"></i></a>
+                    <a href="<?php echo get_permalink($most_recent_post[0]['ID']); ?>" class="bkf-button blue">Read Article <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
             <div class="col-md-6 blog-list">

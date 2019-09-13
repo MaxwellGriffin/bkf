@@ -52,7 +52,7 @@ if ($is_pod) {
             <?php
                 if ($slide_button_text) {
                     ?>
-                <a href="<?php echo $slide_button_url; ?>" class="bkf-button-blue"><?php echo $slide_button_text; ?> <i class="fas fa-chevron-right"></i></a>
+                <a href="<?php echo $slide_button_url; ?>" class="bkf-button blue"><?php echo $slide_button_text; ?> <i class="fas fa-chevron-right"></i></a>
             <?php
                 }
                 ?>

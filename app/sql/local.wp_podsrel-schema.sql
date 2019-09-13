@@ -15,4 +15,4 @@ CREATE TABLE `wp_podsrel` (
   KEY `rel_field_rel_item_idx` (`related_field_id`,`related_item_id`),
   KEY `field_rel_item_idx` (`field_id`,`related_item_id`),
   KEY `rel_field_item_idx` (`related_field_id`,`item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

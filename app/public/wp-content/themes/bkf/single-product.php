@@ -7,10 +7,10 @@
         ?>
         <div class="single-product">
             <div class="container product-main">
-                <p>Home > Products > Stainless Steel Cleaner & Polish</p>
+                <?php //insert_breadcrumbs(); ?>
                 <div class="row">
                     <div class="col-md-5 product-images">
-                        <img src="<?php echo get_theme_file_uri(); ?>/images/products/spray.jpg" alt="" class="main">
+                        <img src="<?php echo $product->field('image_1.guid'); ?>" alt="" class="main">
                         <div class="row no-gutters thumbnails">
                             <div class="col-2 text-center">
                                 <div style="background-image:url('<?php echo $product->field('image_1.guid'); ?>');" alt="" class="bg-image-fit thumb active"></div>
@@ -36,8 +36,8 @@
                         <div class="product-info-smallbox">
                             <h1><?php echo the_title(); ?></h1>
                             <p><?php echo $product->field('tagline'); ?></p>
-                            <a href="" class="bkf-button-blue" target="_blank">Where to Buy <i class="fas fa-chevron-right"></i></a>
-                            <a href="https://www.amazon.com" class="bkf-button-gray amazon-btn" target="_blank">Buy on <img src="<?php echo get_theme_file_uri(); ?>/images/amazon_logo.png" alt="" class="buy-button-img"> <i class="fas fa-chevron-right"></i></a>
+                            <a href="" class="bkf-button blue" target="_blank">Where to Buy <i class="fas fa-chevron-right"></i></a>
+                            <a href="https://www.amazon.com" class="bkf-button gray amazon-btn" target="_blank">Buy on <img src="<?php echo get_theme_file_uri(); ?>/images/amazon_logo.png" alt="" class="buy-button-img"> <i class="fas fa-chevron-right"></i></a>
                         </div>
                         <div class="secondary">
                             <hr>
@@ -69,35 +69,12 @@
             </div>
 
             <div class="container product-secondary">
-                <div class="row">
-                    <div class="col-2">
-                        <div class="tab text-center active" id="tab-1">
-                            <span>How to Use</span>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="tab text-center" id="tab-2">
-                            <span>Where to Use</span>
-                        </div>
-                    </div>
-                    <div class="col-2 col-lg-3 col-xl-2">
-                        <div class="tab text-center" id="tab-3">
-                            <span>Where NOT to Use!</span>
-                        </div>
-                    </div>
-                    <!-- <div class="col-2">
-                        <div class="tab text-center" id="tab-4">
-                            <span>Reviews</span>
-                        </div>
-                    </div> -->
-                    <div class="col-2">
-                        <div class="tab text-center" id="tab-5">
-                            <span>FAQ's</span>
-                        </div>
-                    </div>
-                    <div class="tab-divider-container">
-                        <hr class="tab-divider">
-                    </div>
+                <div class="tabs-container">
+                    <div class="tab active" id="tab-1">How to Use</div>
+                    <div class="tab" id="tab-2">Where to Use</div>
+                    <div class="tab" id="tab-3">Where NOT to Use</div>
+                    <div class="tab" id="tab-5">FAQs</div>
+                    <div class="tabs-divider"></div>
                 </div>
             </div>
 

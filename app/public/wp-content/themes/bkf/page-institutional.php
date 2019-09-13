@@ -25,7 +25,7 @@ insert_slider($institutional_slider['ID']);
     </div>
     <div class="row">
         <div class="col text-center">
-            <a href="#" class="bkf-button-blue">View Products <i class="fas fa-chevron-right"></i></a>
+            <a href="#" class="bkf-button blue">View Products <i class="fas fa-chevron-right"></i></a>
         </div>
     </div>
 </div>

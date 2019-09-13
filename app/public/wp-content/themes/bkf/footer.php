@@ -32,7 +32,7 @@ $footer_phone = $footer_pod->field('phone');
                 <div class="footer-mobile-newsletter-wrapper">
                     <form method="post" class="mobile-newsletter-form">
                         <input type="text" placeholder="Enter Email for BKF Newsletter">
-                        <button class="bkf-button-green">Sign Up <i class="fas fa-chevron-right"></i></button>
+                        <button class="bkf-button green">Sign Up <i class="fas fa-chevron-right"></i></button>
                     </form>
                 </div>
             </div>

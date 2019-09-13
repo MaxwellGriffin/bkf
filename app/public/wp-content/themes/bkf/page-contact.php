@@ -45,14 +45,20 @@ endif;
         </div>
     </div>
     <div class="row">
-        <?php include(locate_template('template-parts/page-contact/contact-box.php', false, false)); ?>
-        <?php include(locate_template('template-parts/page-contact/contact-box.php', false, false)); ?>
-        <?php include(locate_template('template-parts/page-contact/contact-box.php', false, false)); ?>
-        <?php include(locate_template('template-parts/page-contact/contact-box.php', false, false)); ?>
-        <?php include(locate_template('template-parts/page-contact/contact-box.php', false, false)); ?>
-        <?php include(locate_template('template-parts/page-contact/contact-box.php', false, false)); ?>
-        <?php include(locate_template('template-parts/page-contact/contact-box.php', false, false)); ?>
-        <?php include(locate_template('template-parts/page-contact/contact-box.php', false, false)); ?>
+        <?php
+        $args = array(
+            'post_type' => 'distributor',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+        );
+        $distributors = new WP_Query($args);
+        if ($distributors->have_posts()) {
+            while ($distributors->have_posts()) {
+                $distributors->the_post();
+                include(locate_template('template-parts/page-contact/contact-box.php', false, false));
+            }
+        }
+        ?>
     </div>
 </div>
 

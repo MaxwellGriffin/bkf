@@ -19,6 +19,9 @@ if ($inst) {
     $inst_class = "";
     $inst_nav_style = "display:none;";
 }
+if (!$splash) {
+    $splash_class = "nosplash";
+}
 ?>
 <div class="container-fluid bkf-nav-wrapper d-none d-md-block">
     <div class="row">
@@ -33,7 +36,7 @@ if ($inst) {
             </a>
         </div>
     </div>
-    <div class="row">
+    <div class="row nav-row-shadow">
         <div class="col bkf-nav-info text-center d-none d-lg-block">
             <span><?php echo $tagline; ?></span>
             <a href="<?php echo $twitter_url; ?>" target="_blank" class="social-media-link"><i class="fab fa-twitter"></i></a>
@@ -44,7 +47,7 @@ if ($inst) {
             <a href="<?php echo $youtube_url; ?>" target="_blank" class="social-media-link"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
-    <div class="row">
+    <div class="row nav-row-shadow">
         <div class="col bkf-nav-items" id="nav-items-home" style="<?php echo $home_nav_style; ?>">
             <?php
             $args = array(
@@ -76,6 +79,15 @@ if ($inst) {
     <a href="/">
         <img src="<?php echo get_theme_file_uri(); ?>/images/BarKeepersFriend_Logo.png" alt="" class="bkf-logo d-none d-lg-block" style="cursor:pointer;">
     </a>
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb-container <?php echo $splash_class; ?>">
+                <!-- <div class="container"> -->
+                <?php insert_breadcrumbs(); ?>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container-fluid">
@@ -147,6 +159,11 @@ if ($inst) {
         </div>
     </div>
 </div>
+
+<!-- Mobile breadcrumbs -->
+<!-- <div class="breadcrumb-container d-md-none">
+    <?php insert_breadcrumbs(); ?>
+</div> -->
 
 <div class="container-fluid d-md-none bkf-nav-mobile-main-menu">
     <div class="row">

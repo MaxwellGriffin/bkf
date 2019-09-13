@@ -42,3 +42,7 @@
 [11-Sep-2019 13:44:05] NOTICE: ready to handle connections
 [12-Sep-2019 13:49:52] NOTICE: fpm is running, pid 26
 [12-Sep-2019 13:49:52] NOTICE: ready to handle connections
+[12-Sep-2019 21:44:41] NOTICE: Terminating ...
+[12-Sep-2019 21:44:41] NOTICE: exiting, bye-bye!
+[13-Sep-2019 14:00:37] NOTICE: fpm is running, pid 56
+[13-Sep-2019 14:00:37] NOTICE: ready to handle connections

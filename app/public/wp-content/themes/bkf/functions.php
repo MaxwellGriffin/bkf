@@ -69,9 +69,18 @@ add_action('init', function () {
     );
 });
 
+add_action('init', function () {
+    add_rewrite_rule(
+        '^products/category/([^/]+)([/]?)(.*)',
+        'index.php?post_type=product&product_type=$matches[1]',
+        'top'
+    );
+});
+
 add_filter('query_vars', function ($vars) {
     $vars[] = 'pagename';
     $vars[] = 'category';
+    $vars[] = 'product_type';
     return $vars;
 });
 
@@ -217,4 +226,9 @@ function get_post_primary_category($post_id, $term = 'category', $return_all_cat
     }
 
     return $return;
+}
+
+function insert_breadcrumbs()
+{
+    include(locate_template('template-parts/breadcrumbs/breadcrumbs.php', false, false));
 }
