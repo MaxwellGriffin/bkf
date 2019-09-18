@@ -7,7 +7,7 @@ if (have_posts()) : while (have_posts()) : the_post();
         $title = get_the_title();
         ?>
 
-        <?php insert_slider(get_the_ID(), false); ?>
+        <?php insert_slider(null); ?>
 
         <?php insert_widget('before-after-box'); ?>
 

@@ -161,9 +161,9 @@ if (!$splash) {
 </div>
 
 <!-- Mobile breadcrumbs -->
-<!-- <div class="breadcrumb-container d-md-none">
+<div class="breadcrumb-container d-md-none">
     <?php insert_breadcrumbs(); ?>
-</div> -->
+</div>
 
 <div class="container-fluid d-md-none bkf-nav-mobile-main-menu">
     <div class="row">

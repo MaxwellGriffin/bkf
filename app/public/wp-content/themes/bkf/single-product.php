@@ -1,13 +1,24 @@
 <?php get_header(); ?>
 
-<?php insert_nav(false); ?>
+<?php // insert_nav(false); 
+?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post();
+        if (has_term('home', 'product_type') && has_term('institutional', 'product_type')) {
+            echo "<h1 style='color:red'>ERROR - TOO MANY TERMS</h1>";
+        } else if (has_term('home', 'product_type')) {
+            insert_nav(false);
+        } else if (has_term('institutional', 'product_type')) {
+            insert_nav(false, true);
+        } else {
+            echo "<h1 style='color:red'>ERROR - NO TERMS</h1>";
+        }
         $product = pods('product', get_the_id());
         ?>
         <div class="single-product">
             <div class="container product-main">
-                <?php //insert_breadcrumbs(); ?>
+                <?php //insert_breadcrumbs(); 
+                        ?>
                 <div class="row">
                     <div class="col-md-5 product-images">
                         <img src="<?php echo $product->field('image_1.guid'); ?>" alt="" class="main">
@@ -70,10 +81,10 @@
 
             <div class="container product-secondary">
                 <div class="tabs-container">
-                    <div class="tab active" id="tab-1">How to Use</div>
-                    <div class="tab" id="tab-2">Where to Use</div>
-                    <div class="tab" id="tab-3">Where NOT to Use</div>
-                    <div class="tab" id="tab-5">FAQs</div>
+                    <div class="tab active" id="tab-1"><span>How to Use</span></div>
+                    <div class="tab" id="tab-2"><span>Where to Use</span></div>
+                    <div class="tab" id="tab-3"><span>Where NOT to Use</span></div>
+                    <div class="tab" id="tab-5"><span>FAQs</span></div>
                     <div class="tabs-divider"></div>
                 </div>
             </div>
@@ -99,11 +110,14 @@
                                     ?>
                             <div class="product-faq-wrapper">
                                 <div class="product-faq-question">
-                                    <h4><?php echo $faqs[$i]['post_title']; ?> <i class="float-right fas fa-plus"></i></h4>
+                                    <h4><span><?php echo $faqs[$i]['post_title']; ?></span> <i class="float-right fas fa-plus"></i></h4>
                                 </div>
-                                <div class="product-faq-answer">
+                                <div class="product-faq-answer bg-papyrus">
                                     <p><?php echo $faqs[$i]['post_content']; ?></p>
                                 </div>
+                                <!-- <div class="product-faq-answer-heightref bg-papyrus">
+                                    <p><?php echo $faqs[$i]['post_content']; ?></p>
+                                </div> -->
                             </div>
                         <?php
                                 }
@@ -115,8 +129,17 @@
             <script type="text/javascript">
                 jQuery(function($) {
                     $(".product-faq-wrapper h4").click(function() {
-                        $(this).parent().parent().find(".product-faq-answer").toggleClass("show");
-                        $(this).find("i").toggleClass("fa-plus").toggleClass("fa-minus");
+                        // var heightref = $(this).parent().parent().find(".product-faq-answer-heightref");
+                        var answer = $(this).parent().parent().find(".product-faq-answer");
+                        var icon = $(this).find("i");
+
+                        if (answer.height() == 0) {
+                            var newheight = answer.findAutoHeight();
+                            answer.height(newheight);
+                        } else {
+                            answer.height(0);
+                        }
+                        icon.toggleClass("fa-plus").toggleClass("fa-minus");
                     });
                 });
             </script>

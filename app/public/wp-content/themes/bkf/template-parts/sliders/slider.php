@@ -1,24 +1,22 @@
 <?php
-if ($is_pod) {
+global $post;
+$multiple_slides = false;
+if ($id) {
     $my_slider = pods('slider', $id);
     $my_slides = $my_slider->field('my_slides');
     $slideCount = count($my_slides);
-    if ($slideCount == 1) {
-        $multiple_slides = false;
-    } else {
+    if ($slideCount > 1) {
         $multiple_slides = true;
     }
 } else {
-    $multiple_slides = false;
     $slideCount = 1;
 }
-
 ?>
 <div class="container-fluid slider-container">
     <?php
     for ($i = 0; $i < $slideCount; $i++) {
         //set up slide vars
-        if ($is_pod) {
+        if ($id) {
             $slide = pods('slide', $my_slides[$i]["ID"]);
             $slide_headline = $slide->field('slide_headline');
             $slide_paragraph = $slide->field('slide_paragraph');
@@ -34,12 +32,21 @@ if ($is_pod) {
             } else {
                 $slide_state = "";
             }
+        } else if ($slider_args) {
+            //for hardcoded slider
+            $slide_state = " active";
+            $slide_headline = $slider_args[0];
+            $slide_paragraph = $slider_args[1];
+            $slide_button_text = $slider_args[2];
+            $slide_button_url = $slider_args[3];
+            $slide_image = $slider_args[4];
         } else {
             $slide_state = " active";
             $slide_headline = the_title('', '', false);
-            $slide_paragraph = "Lorem ipsum dolor sit amet";
-            $slide_button_text = "View Products";
-            $slide_button_url = "/products";
+            // $slide_paragraph = "Lorem ipsum dolor sit amet";
+            $slide_paragraph = $post->post_excerpt;
+            $slide_button_text = "";
+            $slide_button_url = "";
             //get image
             $thumb_id = get_post_thumbnail_id();
             $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);

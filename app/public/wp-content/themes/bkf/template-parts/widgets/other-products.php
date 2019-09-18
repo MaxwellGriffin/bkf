@@ -24,11 +24,11 @@ $products_query = new WP_Query($args);
         }
         ?>
         <div class="col-md-2 text-center my-auto">
-            <a href="/products" class="bkf-link">View All<br>Products</a>
+            <a href="/products/category/home" class="bkf-link">View All<br>Products</a>
         </div>
     </div>
     <div class="row d-md-none">
-        <div class="col mobile-highlight" id="mobile-highlight-1">
+        <div class="col-12 mobile-highlight" id="mobile-highlight-1">
             <?php
             if ($products_query->have_posts()) {
                 $count = 1;
@@ -39,9 +39,6 @@ $products_query = new WP_Query($args);
                 }
             }
             ?>
-            <div class="col-md-3 text-center d-md-none" style="margin-top:20px;">
-                <a href="/products" class="bkf-link">View All Products <i class="fas fa-share"></i></a>
-            </div>
             <div class="product-slider-buttons">
                 <?php
                 if ($products_query->have_posts()) {
@@ -62,6 +59,9 @@ $products_query = new WP_Query($args);
                 ?>
             </div>
             <span style="display:none" class="mobile-highlight-index-tracker" id="mobile-highlight-index-tracker-1"></span>
+        </div>
+        <div class="col-12 text-center d-md-none" style="margin-top:20px;">
+            <a href="/products/category/home" class="bkf-link">View All Products <i class="fas fa-share"></i></a>
         </div>
     </div>
     <!-- <div class="row d-md-none">

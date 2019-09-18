@@ -22,6 +22,7 @@ global $post;
             <a class="result-link" href="<?php the_permalink(); ?>">
                 <div class="result-box">
                     <h2><?php the_title(); ?></h2>
+                    <p class="result-link"><?php the_permalink(); ?></p>
                     <?php the_excerpt(); ?>
                 </div>
             </a>

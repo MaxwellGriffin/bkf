@@ -13,56 +13,16 @@ insert_slider($home_products_page_slider['ID']);
 
 <div class="container">
     <div class="tabs-container">
-        <div class="tab active">Fun</div>
-        <div class="tab">Epic</div>
-        <div class="tab">Longer Name</div>
+        <div class="tab active"><span>Fun</span></div>
+        <div class="tab"><span>Epic</span></div>
+        <div class="tab"><span>Longer Name</span></span></div>
+        <div class="tab"><span>I'm a Robot</span></div>
         <div class="tabs-divider"></div>
     </div>
 </div>
 
 <style>
-    .tabs-container {
-        width: 100%;
-        height: auto;
-        position: relative;
-        margin: 50px 0px;
-        /* border: 1px solid red; */
-    }
 
-    .tabs-container .tab {
-        display: inline-block;
-        padding: 15px;
-        border-top: 1px solid #E7E7E7;
-        border-right: 1px solid #E7E7E7;
-        border-left: 1px solid #E7E7E7;
-        border-bottom: 1px solid white;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        background-color: white;
-        margin: 0px 10px;
-        z-index: 1;
-        position: relative;
-        cursor: pointer;
-        background-color: #F7F7F7;
-    }
-
-    .tabs-container .tab.active {
-        z-index: 3;
-        border-top: 1px solid var(--blue);
-        border-right: 1px solid var(--blue);
-        border-left: 1px solid var(--blue);
-        background-color: white;
-    }
-
-    .tabs-container .tabs-divider {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        height: 0px;
-        border-top: 1.5px solid var(--blue);
-        z-index: 2;
-    }
 </style>
 
 <script type="text/javascript">

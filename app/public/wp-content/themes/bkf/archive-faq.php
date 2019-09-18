@@ -23,7 +23,8 @@ $cats = get_terms(array(
     <h1>Frequently Asked Questions</h1>
     <p>You have questions. We have answers.</p>
 
-    <div class="row d-none d-md-flex">
+    <!-- <div class="row d-none d-md-flex"> -->
+    <div class="row d-flex">
         <div class="tabs-container">
             <?php
             for ($i = 0; $i < count($cats); $i++) {
@@ -34,7 +35,7 @@ $cats = get_terms(array(
                 }
                 ?>
                 <div class="tab<?php echo $myclass; ?>" id="tab-<?php echo $i; ?>">
-                    <?php echo $cats[$i]->name; ?>
+                    <span><?php echo $cats[$i]->name; ?></span>
                 </div>
             <?php
             }
@@ -44,7 +45,8 @@ $cats = get_terms(array(
     </div>
 </div>
 
-<div class="container single-product d-none d-md-block archive-faq">
+<!-- <div class="container single-product d-none d-md-block archive-faq"> -->
+<div class="container single-product d-block archive-faq">
     <div class="row product-content">
         <?php
         for ($i = 0; $i < count($cats); $i++) {
@@ -70,11 +72,12 @@ $cats = get_terms(array(
                             ?>
                         <div class="product-faq-wrapper">
                             <div class="product-faq-question">
-                                <h4>
-                                    <?php echo the_title(); ?> <i class="float-right fas fa-plus"></i>
-                                </h4>
+                                <h4><span><?php echo the_title(); ?></span> <i class="float-right fas fa-plus"></i></h4>
                             </div>
-                            <div class="product-faq-answer">
+                            <div class="product-faq-answer bg-papyrus">
+                                <?php echo the_content(); ?>
+                            </div>
+                            <div class="product-faq-answer-heightref">
                                 <?php echo the_content(); ?>
                             </div>
                         </div>
@@ -89,7 +92,8 @@ $cats = get_terms(array(
     </div>
 </div>
 
-<div class="container mobile-faq d-md-none archive-faq">
+<!-- <div class="container mobile-faq d-md-none archive-faq"> -->
+<div class="container mobile-faq d-none archive-faq">
     <?php
     for ($i = 0; $i < count($cats); $i++) {
         $args = array(
@@ -140,9 +144,23 @@ $cats = get_terms(array(
 
 <script type="text/javascript">
     jQuery(function($) {
+        // $(".product-faq-wrapper h4").click(function() {
+        //     $(this).parent().parent().find(".product-faq-answer").toggleClass("show");
+        //     $(this).find("i").toggleClass("fa-plus").toggleClass("fa-minus");
+        // });
         $(".product-faq-wrapper h4").click(function() {
-            $(this).parent().parent().find(".product-faq-answer").toggleClass("show");
-            $(this).find("i").toggleClass("fa-plus").toggleClass("fa-minus");
+            var heightref = $(this).parent().parent().find(".product-faq-answer-heightref");
+            var answer = $(this).parent().parent().find(".product-faq-answer");
+            var icon = $(this).find("i");
+
+            if (answer.height() == 0) {
+                // var newheight = heightref.findHiddenHeight();
+                var newheight = heightref.innerHeight();
+                answer.height(newheight);
+            } else {
+                answer.height(0);
+            }
+            icon.toggleClass("fa-plus").toggleClass("fa-minus");
         });
         $(".faq-row-parent").click(function() {
             var id = $(this).attr("id").substring(7);

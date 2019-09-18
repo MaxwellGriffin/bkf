@@ -1,3 +1,6 @@
+<?php
+
+?>
 <div class="col-lg-3 col-md-6 ">
     <div class="product-list-item same-height-column">
         <div class="row" style="height:100%">
@@ -7,7 +10,7 @@
             </div>
             <div class="col-7 text-center my-auto">
                 <div class="bkf-link" style="display:inline-block;">
-                    <a href="#">View<br>Industrial<br>Products</a>
+                    <a href="<?php echo $last_url; ?>">View<br><?php echo $last_type; ?><br>Products</a>
                 </div>
             </div>
         </div>

@@ -44,3 +44,15 @@ function filterBy($key, $value) {
     //go to new url
     window.location.pathname = url;
 }
+
+// GET HIDDEN ELEMENT HEIGHT
+jQuery(function ($) {
+    $.fn.findAutoHeight = function () {
+        var oldHeight = this.css("height");
+        this.css("height", "auto");
+        var myHeight = this.height();
+        this.css("height", oldHeight);
+        console.log("old height = " + this.css("height"));
+        return myHeight;
+    };
+});
