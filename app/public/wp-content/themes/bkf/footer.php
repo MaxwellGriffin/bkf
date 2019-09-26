@@ -110,12 +110,24 @@ $footer_phone = $footer_pod->field('phone');
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-12 mobile-center" style="display:flex">
-                        <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/bedbathbeyond_logo.png" alt=""></a>
-                        <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/target_logo.png" alt=""></a>
-                        <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/menards_logo.png" alt=""></a>
-                        <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/amazon_logo.png" alt=""></a>
-                        <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/homedepot_logo.png" alt=""></a>
-                        <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/walmart_logo.png" alt=""></a>
+                        <div class="footer-store-container">
+                            <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/bedbathbeyond_logo.png" alt=""></a>
+                        </div>
+                        <div class="footer-store-container">
+                            <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/target_logo.png" alt=""></a>
+                        </div>
+                        <div class="footer-store-container">
+                            <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/menards_logo.png" alt=""></a>
+                        </div>
+                        <div class="footer-store-container">
+                            <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/amazon_logo.png" alt=""></a>
+                        </div>
+                        <div class="footer-store-container">
+                            <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/homedepot_logo.png" alt=""></a>
+                        </div>
+                        <div class="footer-store-container">
+                            <a href="#" target="_blank"><img src="<?php echo get_theme_file_uri(); ?>/images/walmart_logo.png" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </div>

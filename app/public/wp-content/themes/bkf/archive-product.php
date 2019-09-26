@@ -9,9 +9,7 @@ if ($path[1] == "products" && $path[2] == "category" && $path[3] == "institution
 } else {
     insert_nav(true, false);
 }
-?>
 
-<?php
 //get home slider
 $slider_control_panel = pods('slider_control_panel');
 $home_products_page_slider = $slider_control_panel->field('home_products_page_slider');

@@ -10,6 +10,8 @@
     "/wp-content/uploads/servaas_streetview.jpg",
 )); ?>
 
+<div class="blue-bar"></div>
+
 <?php insert_widget("other-products", "Try checking out some of our amazing Bar Keepers Friend products!"); ?>
 
 <?php get_footer(); ?>

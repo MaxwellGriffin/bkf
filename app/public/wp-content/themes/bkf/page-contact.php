@@ -38,7 +38,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 endif;
 ?>
 
-<div class="container-fluid distributors">
+<div class="container-fluid distributors bg-papyrus">
     <div class="row">
         <div class="col text-center">
             <h2>International Distributors</h2>

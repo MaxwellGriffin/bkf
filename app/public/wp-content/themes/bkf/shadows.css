@@ -1,0 +1,30 @@
+.shadows {
+    /* inset from bottom */
+    box-shadow: inset 0px -10px 15px -10px black;
+    /* inset from top */
+    box-shadow: inset 0px 10px 15px -10px black;
+    /* floating top-left */
+    box-shadow: 2px 2px 5px 1px black;
+    /* floating top-left (pressed) */
+    box-shadow: 1px 1px 5px 1px black;
+    /* general shadow */
+    box-shadow: 0px 0px 10px 0px black;
+    /* general shadow inset */
+    box-shadow: inset 0px 0px 5px 1px black;
+}
+
+:root {
+    --bs-inset-from-bottom: inset 0px -10px 15px -10px black;
+    --bs-inset-from-top: inset 0px 10px 15px -10px black;
+    --bs-inset-top-bottom: inset 0px -10px 15px -10px black, inset 0px 10px 15px -10px black;
+    --bs-floating-top-left: 2px 2px 5px 1px black;
+    --bs-floating-top-left-pressed: 1px 1px 5px 1px black;
+    --bs-general-shadow: 0px 0px 10px 0px black;
+    --bs-general-shadow-inset: inset 0px 0px 5px 1px black;
+    --bs-general-shadow-hover: 0px 0px 6px 0px black;
+    --bs-general-shadow-active: 0px 0px 2px 0px black;
+}
+
+.test {
+    box-shadow: inset 0px -10px 10px -10px black, inset 0px 10px 10px -10px black, inset 10px 0px 10px -10px black;
+}

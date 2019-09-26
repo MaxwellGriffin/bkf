@@ -1,8 +1,12 @@
-<!-- <?php 
-$mycat = get_post_primary_category(the_ID())['primary_category']->name; 
-?> -->
-<div class="col-md-4 text-center post bg-image-fit" style="background-image:url('<?php echo the_post_thumbnail_url(); ?>')">
-    <a href="<?php the_permalink(); ?>">
+<!-- DO NOT REMOVE THIS COMMENT, MUST BE COMMENTED
+<?php
+$mycat = get_post_primary_category(the_ID())['primary_category']->name;
+?> 
+-->
+<!-- <div class="col-md-4 text-center post bg-image-fit" style="background-image:url('<?php //echo the_post_thumbnail_url(); ?>')"> -->
+<div class="col-md-4 text-center">
+    <div class="post bg-image-fit" style="background-image:url('<?php echo the_post_thumbnail_url(); ?>')">
+        <a href="<?php the_permalink(); ?>" class="post-link"></a>
         <div class="post-content">
             <div class="row">
                 <div class="col">
@@ -17,5 +21,5 @@ $mycat = get_post_primary_category(the_ID())['primary_category']->name;
                 </div>
             </div>
         </div>
-    </a>
+    </div>
 </div>

@@ -9,13 +9,6 @@ jQuery(function ($) {
             $(".same-height-column").height(maxHeight);
         }
     });
-    $(".tab").click(function () {
-        $(".tab").removeClass("active");
-        $(this).addClass("active");
-        var id = $(this).attr("id").substring(4);
-        $(".tab-content").removeClass("active");
-        $("#content-" + id).addClass("active");
-    });
 });
 
 function filterBy($key, $value) {
@@ -45,8 +38,8 @@ function filterBy($key, $value) {
     window.location.pathname = url;
 }
 
-// GET HIDDEN ELEMENT HEIGHT
 jQuery(function ($) {
+    // GET HIDDEN ELEMENT HEIGHT
     $.fn.findAutoHeight = function () {
         var oldHeight = this.css("height");
         this.css("height", "auto");
@@ -55,4 +48,37 @@ jQuery(function ($) {
         console.log("old height = " + this.css("height"));
         return myHeight;
     };
+
+    //weird function for toggling all FA (font awesome) classes to their opposite
+    $.fn.toggleFA = function () {
+        var classes = {
+            //add class pairs here
+            "fa-chevron-down": "fa-chevron-up",
+            "fa-chevron-right": "fa-chevron-left",
+        };
+        for (var key in classes) {
+            if (this.hasClass(key) || this.hasClass(classes[key])) {
+                this.toggleClass(key).toggleClass(classes[key]);
+            }
+        }
+        return $(this);
+    }
+
+    // remove sidebar on X button click
+    $(".form-close").click(function () {
+        $(".sidebar-form-container").fadeTo(200, 0, function () {
+            $(".sidebar-form-container").remove();
+            // $(".what-to-use-box").addClass("after-removed");
+            // $(".sidebar-img-container").addClass("after-removed");
+        });
+    });
+
+    //tab functionality
+    $(".tab").click(function () {
+        $(".tab").removeClass("active");
+        $(this).addClass("active");
+        var id = $(this).attr("id").substring(4);
+        $(".tab-content").removeClass("active");
+        $("#content-" + id).addClass("active");
+    });
 });

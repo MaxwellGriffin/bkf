@@ -18,16 +18,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="what-to-use-box">
-                            <h5>Our New "Friends"--</h5>
-                            <?php include(locate_template('template-parts/single/what-to-use-item.php', false, false)); ?>
-                            <?php include(locate_template('template-parts/single/what-to-use-item.php', false, false)); ?>
-                            <?php include(locate_template('template-parts/single/what-to-use-item.php', false, false)); ?>
-                            <?php include(locate_template('template-parts/single/what-to-use-item.php', false, false)); ?>
-                            <a href="#" class="where-to-buy-button text-center">
-                                Where to Buy&nbsp;<i class="fas fa-chevron-right"></i>
-                            </a>
-                        </div>
+                        <?php insert_what_to_use_box("newest"); ?>
                     </div>
                 </div>
             </div>
@@ -42,6 +33,33 @@ if (have_posts()) : while (have_posts()) : the_post();
 endif;
 ?>
 
-<?php insert_widget("other-products", "Our Oldest, Most Trusted \"Friends\"--"); ?>
+<?php
+// ASC = oldest first
+// DESC = newest first
+// insert_widget("other-products", "Our Oldest, Most Trusted \"Friends\"—", "date", "ASC"); //oldest
+//
+//\
+//\\
+//\\\
+//\\\\
+//\\\\\
+//\\\\\\
+//\\\\\\\
+//\\\\\\\\
+//\\\\\\\\\
+//\\\\\\\\\\
+insert_widget("other-products", "Our Newest, Most Trusted \"Friends\"—", "date", "DESC"); //newest
+////////////
+///////////
+//////////
+/////////
+////////
+///////
+//////
+/////
+////
+///
+//
+?>
 
 <?php get_footer(); ?>

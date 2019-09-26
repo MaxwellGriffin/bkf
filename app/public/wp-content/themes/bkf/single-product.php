@@ -46,7 +46,8 @@
                     <div class="col-md-7 product-info">
                         <div class="product-info-smallbox">
                             <h1><?php echo the_title(); ?></h1>
-                            <p><?php echo $product->field('tagline'); ?></p>
+                            <!-- <p><?php // echo $product->field('tagline'); ?></p> -->
+                            <p><?php echo the_excerpt(); ?></p>
                             <a href="" class="bkf-button blue" target="_blank">Where to Buy <i class="fas fa-chevron-right"></i></a>
                             <a href="https://www.amazon.com" class="bkf-button gray amazon-btn" target="_blank">Buy on <img src="<?php echo get_theme_file_uri(); ?>/images/amazon_logo.png" alt="" class="buy-button-img"> <i class="fas fa-chevron-right"></i></a>
                         </div>
@@ -189,7 +190,7 @@
 
 <?php insert_widget("other-products", "You May Also Love"); ?>
 
-<?php insert_widget('places-box'); ?>
+<?php insert_widget('places-box', 'You might be surprised how many places Bar Keepers Friend cleaning products can be used throughout the home!'); ?>
 
 <?php insert_widget('blog-highlight'); ?>
 

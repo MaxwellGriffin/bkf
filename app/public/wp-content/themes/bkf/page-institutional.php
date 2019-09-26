@@ -12,7 +12,7 @@ insert_slider($institutional_slider['ID']);
 
 <?php insert_widget('before-after-box'); ?>
 
-<?php insert_widget('places-box'); ?>
+<?php insert_widget('places-box', 'You might be surprised how many places Bar Keepers Friend cleaning products can be used throughout the home!'); ?>
 
 <?php insert_widget('other-products', 'Once Tried, Always Used'); ?>
 

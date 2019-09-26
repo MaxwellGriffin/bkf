@@ -1,5 +1,5 @@
 <?php
-$numResults;
+$numResults = 0;
 global $post;
 ?>
 
@@ -42,7 +42,10 @@ global $post;
     jQuery(function($) {
         $(document).ready(function() {
             //set heading text
-            if (numResults == 1) {
+            if (numResults == 0){
+                $("#result-field").text("No results");
+                console.log("none");
+            } else if (numResults == 1) {
                 $("#result-field").text(numResults + " result");
                 console.log("single");
             } else {

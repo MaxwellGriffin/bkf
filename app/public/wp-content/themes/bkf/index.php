@@ -9,7 +9,7 @@ $cats = get_terms(array(
     'hide_empty' => true,
 ));
 
-$postsPerPage = 12;
+$postsPerPage_ajax = 12;
 
 //get most recent post
 $args = array(
@@ -30,7 +30,7 @@ $posts_per_page = 4;
 $offset = 1;
 $calculated_offset = (($paged - 1) * $posts_per_page) + $offset;
 
-echo "<!-- Paged = " . $paged . " -->";
+// echo "<!-- Paged = " . $paged . " -->";
 $args = array(
     'posts_per_page' => $posts_per_page,
     // 'paged' => 2,
@@ -43,6 +43,17 @@ $args = array(
 // $recent_posts = wp_get_recent_posts($args);
 $main_query = new WP_Query($args);
 global $main_query;
+
+//create mobile query
+$args = array(
+    'posts_per_page' => $posts_per_page,
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'offset' => $calculated_offset - $offset,
+    'orderby' => 'post_date',
+    'order' => 'DESC',
+);
+$mobile_query = new WP_Query($args);
 ?>
 
 <div class="index">
@@ -64,12 +75,12 @@ global $main_query;
                 <div class="row">
                     <!--Posts go here (ajax)-->
                 </div>
-                <span>Pagination Goes Here</span>
+                <!-- <span>Pagination Goes Here</span> -->
             </div>
-            <h2>Most Recent</h2>
             <div class="row">
                 <div class="col-md-6">
                     <!-- most recent post -->
+                    <h2>Most Recent</h2>
                     <div class="featured-post">
                         <img src="<?php echo get_the_post_thumbnail_url($most_recent_post[0]['ID']); ?>" alt="">
                         <p class="category-links">
@@ -92,10 +103,11 @@ global $main_query;
                                 ?>...</p> -->
                         <p><?php echo $most_recent_post[0]['post_excerpt']; ?></p>
                         <a href="<?php echo get_permalink($most_recent_post[0]['ID']); ?>" class="bkf-button blue">Read Article <i class="fas fa-chevron-right"></i></a>
-                        <hr>
                     </div>
+                    <hr>
                 </div>
                 <div class="col-md-6 blog-list">
+                    <h2>Posts</h2>
                     <!-- main index -->
                     <?php
                     if ($main_query->have_posts()) {
@@ -114,10 +126,11 @@ global $main_query;
             </div>
         </div>
         <div class="d-md-none blog-list">
+            <!-- mobile index -->
             <?php
-            if ($main_query->have_posts()) {
-                while ($main_query->have_posts()) {
-                    $main_query->the_post();
+            if ($mobile_query->have_posts()) {
+                while ($mobile_query->have_posts()) {
+                    $mobile_query->the_post();
                     include(locate_template('template-parts/index/blog-list-post.php', false, false));
                 }
             }
@@ -134,7 +147,7 @@ global $main_query;
 <script type="text/javascript">
     var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
     var page = 1;
-    var postsPerPage = <?php echo $postsPerPage ?>;
+    var postsPerPage = <?php echo $postsPerPage_ajax ?>;
     var anotherPage = true;
     jQuery(function($) {
         $(".filter-button").click(function() {

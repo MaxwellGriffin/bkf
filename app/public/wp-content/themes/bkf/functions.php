@@ -17,7 +17,8 @@ function bkf_config()
 {
     add_theme_support('post-thumbnails'); //add support for thumbnails
     add_theme_support('title-tag');
-    add_theme_support('yoast-seo-breadcrumbs');
+    add_theme_support('yoast-seo-breadcrumbs'); //self explanatory
+    add_post_type_support('page', 'excerpt'); //add excerpt for pages
 }
 add_action('after_setup_theme', 'bkf_config', 0); //hook
 
@@ -50,9 +51,14 @@ function insert_nav($splash = true, $inst = false)
     }
 }
 
-function insert_widget($type, $title = "ERROR NO TITLE")
+function insert_widget($type, $title = "ERROR NO TITLE", $orderby = "date", $order = "DESC")
 {
     include(locate_template('template-parts/widgets/' . $type . '.php', false, false));
+}
+
+function insert_what_to_use_box($type)
+{
+    include(locate_template('template-parts/single/what-to-use-box.php', false, false));
 }
 
 function insert_slider($id, array $slider_args = null)

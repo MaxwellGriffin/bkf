@@ -144,18 +144,12 @@ $cats = get_terms(array(
 
 <script type="text/javascript">
     jQuery(function($) {
-        // $(".product-faq-wrapper h4").click(function() {
-        //     $(this).parent().parent().find(".product-faq-answer").toggleClass("show");
-        //     $(this).find("i").toggleClass("fa-plus").toggleClass("fa-minus");
-        // });
         $(".product-faq-wrapper h4").click(function() {
-            var heightref = $(this).parent().parent().find(".product-faq-answer-heightref");
             var answer = $(this).parent().parent().find(".product-faq-answer");
             var icon = $(this).find("i");
 
             if (answer.height() == 0) {
-                // var newheight = heightref.findHiddenHeight();
-                var newheight = heightref.innerHeight();
+                var newheight = answer.findAutoHeight();
                 answer.height(newheight);
             } else {
                 answer.height(0);

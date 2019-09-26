@@ -1,4 +1,5 @@
 <?php
+//get fields
 $header_pod = pods('header_control_panel');
 $tagline = $header_pod->field('tagline');
 $social_media_links = pods('social_media_links');
@@ -8,6 +9,7 @@ $facebook_url = $social_media_links->field('facebook');
 $linkedin_url = $social_media_links->field('linkedin');
 $pinterest_url = $social_media_links->field('pinterest');
 $youtube_url = $social_media_links->field('youtube');
+//set up nav classes (home/institutional)
 if ($inst) {
     $home_class = "";
     $home_nav_style = "display:none;";
@@ -24,16 +26,12 @@ if (!$splash) {
 }
 ?>
 <div class="container-fluid bkf-nav-wrapper d-none d-md-block">
-    <div class="row">
-        <div class="col-6 col-md-4 col-xl-3 text-center bkf-nav-tab <?php echo $home_class ?>" id="nav-tab-home">
-            <a href="/">
-                <span class="align-middle">Household Cleaning</span>
-            </a>
+    <div class="bkf-nav-tab-wrapper">
+        <div class="text-center bkf-nav-tab <?php echo $home_class ?>" id="nav-tab-home">
+            <a href="/"><span class="align-middle">Household Cleaning</span></a>
         </div>
-        <div class="col-6 col-md-4 col-xl-3 text-center bkf-nav-tab <?php echo $inst_class ?>" id="nav-tab-inst">
-            <a href="/institutional">
-                <span class="align-middle">Institutional Cleaning</span>
-            </a>
+        <div class="text-center bkf-nav-tab <?php echo $inst_class ?>" id="nav-tab-inst">
+            <a href="/institutional"><span class="align-middle">Institutional Cleaning</span></a>
         </div>
     </div>
     <div class="row nav-row-shadow">
@@ -57,7 +55,7 @@ if (!$splash) {
             wp_nav_menu($args);
             echo "</nav>";
             ?>
-            <span href="" class="bkf-nav-item bkf-nav-search-button" style="cursor:pointer;">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span href="" class="bkf-nav-item bkf-nav-search-button" style="cursor:pointer;padding-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </div>
         <div class="col bkf-nav-items" id="nav-items-inst" style="<?php echo $inst_nav_style; ?>">
             <?php
@@ -68,7 +66,7 @@ if (!$splash) {
             wp_nav_menu($args);
             echo "</nav>";
             ?>
-            <span href="" class="bkf-nav-item bkf-nav-search-button" style="cursor:pointer;">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span href="" class="bkf-nav-item bkf-nav-search-button" style="cursor:pointer;padding-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </div>
     </div>
     <div class="row d-none d-md-block">
@@ -79,15 +77,13 @@ if (!$splash) {
     <a href="/">
         <img src="<?php echo get_theme_file_uri(); ?>/images/BarKeepersFriend_Logo.png" alt="" class="bkf-logo d-none d-lg-block" style="cursor:pointer;">
     </a>
-    <div class="row">
-        <div class="col-12">
-            <div class="breadcrumb-container <?php echo $splash_class; ?>">
-                <!-- <div class="container"> -->
-                <?php insert_breadcrumbs(); ?>
-                <!-- </div> -->
-            </div>
-        </div>
+    <!-- <div class="row"> -->
+    <!-- <div class="col-12"> -->
+    <div class="breadcrumb-container <?php echo $splash_class; ?>">
+        <?php insert_breadcrumbs(); ?>
     </div>
+    <!-- </div> -->
+    <!-- </div> -->
 </div>
 
 <div class="container-fluid">
@@ -161,7 +157,7 @@ if (!$splash) {
 </div>
 
 <!-- Mobile breadcrumbs -->
-<div class="breadcrumb-container d-md-none">
+<div class="breadcrumb-container d-md-none" id="mobile-breadcrumb-container">
     <?php insert_breadcrumbs(); ?>
 </div>
 

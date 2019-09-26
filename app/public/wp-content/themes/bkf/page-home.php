@@ -20,7 +20,7 @@ insert_slider($home_slider['ID']);
 
 <?php insert_widget('before-after-box'); ?>
 
-<?php insert_widget('places-box'); ?>
+<?php insert_widget('places-box', 'You might be surprised how many places Bar Keepers Friend cleaning products can be used throughout the home!'); ?>
 
 <?php insert_widget('other-products', 'Once Tried, Always Used'); ?>
 
@@ -33,7 +33,7 @@ insert_slider($home_slider['ID']);
     </div>
     <div class="row">
         <div class="col text-center">
-            <a href="/products" class="bkf-button blue">View Products <i class="fas fa-chevron-right"></i></a>
+            <a href="/products/category/home" class="bkf-button blue">View Products <i class="fas fa-chevron-right"></i></a>
         </div>
     </div>
 </div>
