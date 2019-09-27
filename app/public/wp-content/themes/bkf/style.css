@@ -1683,6 +1683,7 @@ Product (single)
 
 .single-product .product-info .info-button {
     color: var(--blue);
+    border: 1px solid white;
     padding: 10px;
     cursor: pointer;
     display: inline-block;
@@ -2630,32 +2631,9 @@ Landing Page
 
 /*
 ======================================================================================================================================================================
-Blog How To Widget
-*/
-
-.blog-how-to-wrapper{
-    padding:50px;
-}
-
-.carousel-container{
-    border:1px solid red;
-    position:relative;
-}
-
-.carousel-container .carousel-window{
-
-}
-
-.carousel-container .carousel-window .carousel-item{
-    
-}
-
-
-/*
-======================================================================================================================================================================
 Instagram Before & After
 */
 
 a.instagram {
-  border: 1px solid #e7e7e7;
+    border: 1px solid #e7e7e7;
 }

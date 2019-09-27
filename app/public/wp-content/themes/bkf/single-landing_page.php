@@ -65,4 +65,6 @@ if (have_posts()) : while (have_posts()) : the_post();
     </div>
 <?php endif; ?>
 
+<?php include(locate_template('template-parts/widgets/blog-how-to.php', false, false)); ?>
+
 <?php include(locate_template('template-parts/landing_page/landing-footer.php', false, false)); ?>

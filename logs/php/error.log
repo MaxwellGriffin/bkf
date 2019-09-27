@@ -455,3 +455,4 @@ Stack trace:
 [26-Sep-2019 17:45:01 UTC] PHP Warning:  Use of undefined constant index - assumed 'index' (this will throw an Error in a future version of PHP) in /app/public/wp-content/themes/bkf/template-parts/widgets/places-box.php on line 45
 [26-Sep-2019 17:45:28 UTC] PHP Warning:  Use of undefined constant index - assumed 'index' (this will throw an Error in a future version of PHP) in /app/public/wp-content/themes/bkf/template-parts/widgets/places-box.php on line 45
 [26-Sep-2019 17:46:41 UTC] PHP Warning:  Use of undefined constant index - assumed 'index' (this will throw an Error in a future version of PHP) in /app/public/wp-content/themes/bkf/template-parts/widgets/places-box.php on line 45
+[27-Sep-2019 19:59:16 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /app/public/wp-content/themes/bkf/template-parts/widgets/blog-how-to.php on line 14
