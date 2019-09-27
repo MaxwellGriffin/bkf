@@ -1,0 +1,15 @@
+.description {
+  margin-bottom: 40px;
+  display: block;
+  overflow: hidden; }
+  .description img {
+    width: 50%;
+    display: inline-block;
+    float: right; }
+
+#output img {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px; }

@@ -144,6 +144,23 @@ $mobile_query = new WP_Query($args);
     </div>
 </div>
 
+<div class="container">
+  <div class="row">
+
+    <?php
+      
+    if ( have_posts() ) {
+      while ( have_posts() ) {
+        the_post();
+        get_template_part( 'template-parts/index/blog-list', get_post_type(get_the_id()) );
+      }
+    }
+      
+    ?>
+
+  </div>
+</div>
+
 <script type="text/javascript">
     var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
     var page = 1;
