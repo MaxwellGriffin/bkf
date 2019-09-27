@@ -283,7 +283,7 @@ Blog How To Widget
         top: 50%;
         transform: translateY(-50%);
         box-shadow:var(--bs-general-shadow);
-        transition:all 0.1s ease;
+        transition:all 50ms ease;
     }
 
     .mycarousel-button:active{
