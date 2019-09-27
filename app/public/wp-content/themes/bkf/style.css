@@ -1683,6 +1683,7 @@ Product (single)
 
 .single-product .product-info .info-button {
     color: var(--blue);
+    border: 1px solid white;
     padding: 10px;
     cursor: pointer;
     display: inline-block;
@@ -2626,26 +2627,4 @@ Landing Page
     width: 100%;
     height: auto;
     border-radius: 4px;
-}
-
-/*
-======================================================================================================================================================================
-Blog How To Widget
-*/
-
-.blog-how-to-wrapper{
-    padding:50px;
-}
-
-.carousel-container{
-    border:1px solid red;
-    position:relative;
-}
-
-.carousel-container .carousel-window{
-
-}
-
-.carousel-container .carousel-window .carousel-item{
-    
 }
