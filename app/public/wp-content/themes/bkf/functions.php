@@ -1,4 +1,22 @@
 <?php
+  
+define( 'CHILD_THEME', 'bkf' );
+define( 'CHILD_THEME_NAME', 'Bar Keepers Friend' );
+define( 'CHILD_THEME_URL', get_stylesheet_directory_uri() );
+define( 'CHILD_THEME_DIRNAME', basename( __DIR__ ) );
+define( 'CHILD_THEME_DIR', __DIR__ );
+define( 'CHILD_THEME_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '1.0.0' ); // Cache-bust in debug mode
+
+require_once( 'lib/ajax.php' );
+require_once( 'lib/instagram/post-type.php' );
+require_once( 'lib/instagram/instagram.php' );
+require_once( 'lib/theme.php' );
+
+BarkeepersFriend::Init();
+BarkeepersFriendAJAX::Init();
+BarkeepersFriendInstagram::Init();
+
+  
 //Enqueue scripts and styles
 function load_scripts()
 {

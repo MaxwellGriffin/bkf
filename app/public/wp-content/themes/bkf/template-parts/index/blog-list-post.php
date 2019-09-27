@@ -9,7 +9,8 @@
             <p class="category-links">
                 <?php
                 $myterms = get_the_terms(get_the_ID(), "category");
-                for ($o = 0; $o < count($myterms); $o++) {
+                if ( is_array( $myterms ) ) :
+                  for ($o = 0; $o < count($myterms); $o++) {
                     if ($o == count($myterms) - 1) {
                         $comma = "";
                     } else {
@@ -18,7 +19,8 @@
                     ?>
                     <a href="#" class="category-link" id="filter-button-<?php echo $myterms[$o]->slug; ?>"><?php echo $myterms[$o]->name; ?></a><span><?php echo $comma; ?></span>
                 <?php
-                }
+                  }
+                endif;
                 ?>
             </p>
             <a href="<?php the_permalink(); ?>">
