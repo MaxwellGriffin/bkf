@@ -17,7 +17,7 @@ INSERT INTO `wp_usermeta` VALUES
 (13,1,"wp_user_level","10"),
 (14,1,"dismissed_wp_pointers",""),
 (15,1,"show_welcome_panel","0"),
-(17,1,"wp_dashboard_quick_press_last_post_id","395"),
+(17,1,"wp_dashboard_quick_press_last_post_id","450"),
 (18,1,"community-events-location","a:1:{s:2:\"ip\";s:12:\"192.168.95.0\";}"),
 (19,1,"show_per_page","25"),
 (20,1,"orderby",""),
@@ -28,7 +28,7 @@ INSERT INTO `wp_usermeta` VALUES
 (25,1,"nav_menu_recently_edited","16"),
 (26,1,"managenav-menuscolumnshidden","a:5:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";i:4;s:15:\"title-attribute\";}"),
 (27,1,"metaboxhidden_nav-menus","a:8:{i:0;s:17:\"add-post-type-faq\";i:1;s:25:\"add-post-type-product_faq\";i:2;s:21:\"add-post-type-product\";i:3;s:20:\"add-post-type-slider\";i:4;s:19:\"add-post-type-slide\";i:5;s:12:\"add-post_tag\";i:6;s:16:\"add-faq_category\";i:7;s:16:\"add-product_type\";}"),
-(28,1,"session_tokens","a:5:{s:64:\"dde77e7c412aa084cc2ada13429210b6f81de939362476b874104dbbf82c68fa\";a:4:{s:10:\"expiration\";i:1570213620;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569004020;}s:64:\"ac9764c0ce328a20d61bd391fe45246047b0f6bff7e4144332912bf022d0f145\";a:4:{s:10:\"expiration\";i:1570213627;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569004027;}s:64:\"f3dd988d84564e496b74035eb09e5b2c2cb49e9412d74545818a2c260168de78\";a:4:{s:10:\"expiration\";i:1569594578;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569421778;}s:64:\"05792019eb0fd5fd688e8c3e958851d727bb942c65b80929e71e8bac5796ef3a\";a:4:{s:10:\"expiration\";i:1569598609;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569425809;}s:64:\"64ce05242afffbaa7dfa9c0a0b3ffd5ed0dc8796b896c1e32bf500a933960971\";a:4:{s:10:\"expiration\";i:1569598615;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569425815;}}"),
+(28,1,"session_tokens","a:6:{s:64:\"dde77e7c412aa084cc2ada13429210b6f81de939362476b874104dbbf82c68fa\";a:4:{s:10:\"expiration\";i:1570213620;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569004020;}s:64:\"ac9764c0ce328a20d61bd391fe45246047b0f6bff7e4144332912bf022d0f145\";a:4:{s:10:\"expiration\";i:1570213627;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569004027;}s:64:\"067a7add3e99c6af5f20ec7973cea3af3d6910f4797d6651618efc3b4936a4f7\";a:4:{s:10:\"expiration\";i:1570716684;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569507084;}s:64:\"03f6159e708c96469fb39666d3bf5ec2ae02389162663eb3db9315769a3eaccb\";a:4:{s:10:\"expiration\";i:1569792368;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569619568;}s:64:\"ab8d357975e2ba150bc24ba038257bcf1761eab8d4d64aa519c39ca4e2d675f6\";a:4:{s:10:\"expiration\";i:1569792375;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569619575;}s:64:\"67775aaab3dfdc8bb83b3c5c0014b409f738832af535c6c707603ef175efecd3\";a:4:{s:10:\"expiration\";i:1569792421;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\";s:5:\"login\";i:1569619621;}}"),
 (29,1,"closedpostboxes_post","a:1:{i:0;s:10:\"wpseo_meta\";}"),
 (30,1,"metaboxhidden_post","a:0:{}"),
 (32,1,"closedpostboxes_landing_page","a:1:{i:0;s:10:\"wpseo_meta\";}"),
@@ -38,4 +38,9 @@ INSERT INTO `wp_usermeta` VALUES
 (36,1,"closedpostboxes_slide","a:1:{i:0;s:10:\"wpseo_meta\";}"),
 (37,1,"metaboxhidden_slide","a:1:{i:0;s:7:\"slugdiv\";}"),
 (38,1,"closedpostboxes_slider","a:1:{i:0;s:10:\"wpseo_meta\";}"),
-(39,1,"metaboxhidden_slider","a:1:{i:0;s:7:\"slugdiv\";}");
+(39,1,"metaboxhidden_slider","a:1:{i:0;s:7:\"slugdiv\";}"),
+(40,1,"closedpostboxes_dashboard","a:1:{i:0;s:18:\"dashboard_activity\";}"),
+(41,1,"metaboxhidden_dashboard","a:0:{}"),
+(42,1,"meta-box-order_dashboard","a:4:{s:6:\"normal\";s:63:\"dashboard_right_now,dashboard_activity,wpseo-dashboard-overview\";s:4:\"side\";s:39:\"dashboard_quick_press,dashboard_primary\";s:7:\"column3\";s:0:\"\";s:7:\"column4\";s:0:\"\";}"),
+(43,1,"closedpostboxes_blog_how_to_item","a:1:{i:0;s:10:\"wpseo_meta\";}"),
+(44,1,"metaboxhidden_blog_how_to_item","a:1:{i:0;s:7:\"slugdiv\";}");
